@@ -2,9 +2,153 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Connect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- TODO: replace name + description with your own -->
+  <title>Connect &middot; Firstname Lastname</title>
+  <meta name="description" content="Ways to connect with Firstname Lastname.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap">
+  <style>
+    :root {
+      --bg: #F4F2EE;
+      --card: #FFFFFF;
+      --ink: #1D2226;
+      --muted: #5E5E5E;
+      --line: #E0DFDC;
+      --accent: #0A66C2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Source Sans 3", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
+    p { margin: 0; }
+    a { color: var(--accent); text-decoration: none; }
+
+    .page {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 64px 20px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .header { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    .avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: #E9E5DF;
+      border: 3px solid var(--card);
+      box-shadow: 0 0 0 1px var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8A8A8A;
+      overflow: hidden;
+    }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; }
+    h1 { margin: 0; font-size: 22px; font-weight: 700; }
+    .tagline { font-size: 15px; color: var(--muted); text-align: center; }
+
+    .links { width: 100%; display: flex; flex-direction: column; gap: 12px; }
+    .link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px 16px;
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 600;
+      transition: border-color .12s ease, background .12s ease;
+    }
+    .link:hover { border-color: var(--accent); background: #EAF3FB; text-decoration: none; }
+    .link .icon { display: flex; color: var(--accent); flex-shrink: 0; }
+    .link .label { flex-grow: 1; }
+    .link .chevron { color: #9A9A9A; flex-shrink: 0; }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .back:hover { color: var(--ink); text-decoration: none; }
+
+    @media (max-width: 480px) {
+      .page { padding-top: 40px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Connect</h1>
+  <main class="page">
+    <div class="header">
+      <div class="avatar">
+        <!-- Swap for a headshot: <img src="/avatar.jpg" alt="Firstname Lastname"> -->
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"></path></svg>
+      </div>
+      <h1>Firstname Lastname</h1>
+      <p class="tagline">Short one-line tagline about what you do</p>
+    </div>
+
+    <nav class="links">
+      <!-- TODO: set each href to your real profile URL -->
+      <a class="link" href="#">
+        <span class="icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.36 4.26 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"></path></svg>
+        </span>
+        <span class="label">LinkedIn</span>
+        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+      </a>
+
+      <a class="link" href="#">
+        <span class="icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.37.5 0 5.78 0 12.29c0 5.2 3.44 9.6 8.2 11.16.6.1.83-.25.83-.56v-2c-3.34.71-4.04-1.4-4.04-1.4-.55-1.36-1.34-1.72-1.34-1.72-1.09-.72.08-.71.08-.71 1.2.08 1.84 1.22 1.84 1.22 1.07 1.79 2.81 1.27 3.5.97.1-.76.42-1.27.76-1.56-2.67-.3-5.47-1.31-5.47-5.83 0-1.29.47-2.34 1.24-3.17-.12-.3-.54-1.5.12-3.15 0 0 1.01-.32 3.3 1.21a11.5 11.5 0 0 1 6 0c2.29-1.53 3.3-1.21 3.3-1.21.66 1.65.24 2.85.12 3.15.77.83 1.23 1.88 1.23 3.17 0 4.53-2.8 5.53-5.48 5.82.43.37.81 1.1.81 2.22v3.29c0 .31.22.67.83.56A12.02 12.02 0 0 0 24 12.29C24 5.78 18.63.5 12 .5z"></path></svg>
+        </span>
+        <span class="label">GitHub</span>
+        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+      </a>
+
+      <a class="link" href="#">
+        <span class="icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3.5 7l8.5 6 8.5-6"></path></svg>
+        </span>
+        <span class="label">Email</span>
+        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+      </a>
+
+      <a class="link" href="#">
+        <span class="icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 1.6h3.68l-8.04 9.19L24 22.4h-7.4l-5.8-7.58-6.64 7.58H.48l8.6-9.83L0 1.6h7.6l5.24 6.93L18.9 1.6zm-1.29 18.6h2.04L6.49 3.7H4.3l13.31 16.5z"></path></svg>
+        </span>
+        <span class="label">X</span>
+        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+      </a>
+
+      <a class="link" href="#">
+        <span class="icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"></circle></svg>
+        </span>
+        <span class="label">Instagram</span>
+        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+      </a>
+    </nav>
+
+    <a class="back" href="/">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
+      Back to profile
+    </a>
+  </main>
 </body>
 </html>
